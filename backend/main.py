@@ -24,7 +24,7 @@ async def hello_world():
 @app.post("/api/format-sql")
 async def format_sql(request: SQLRequest):
     try:
-        formatted_sql = fix(request.sql, dialect=request.dialect, config_path='./backend/.sqlfluff')
+        formatted_sql = fix(request.sql, dialect=request.dialect, config_path='./config/.sqlfluff')
         return {"message": "SQL formatted successfully.", "sql": formatted_sql}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

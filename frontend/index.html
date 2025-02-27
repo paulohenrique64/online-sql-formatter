@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>SQL Formatter</h1>
+        <form action="" id="sql-formatter-form">
+            <div>
+                <select name="sql-dialects" id="sql-dialects">
+                    <option value="sqlite">SQLite</option>
+                    <option value="postgres">Postgres</option>
+                </select>
+            </div>
+            <div class="text-areas">
+                <textarea name="sql-input" id="sql-input"></textarea>
+                <textarea name="sql-output" id="sql-output"></textarea>
+            </div>
+            <div>
+                <button id="submit-button">Format</button>
+                <label for="submit-button" id="submit-button-label"></label>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
